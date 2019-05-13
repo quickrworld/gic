@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace MyClassLibrary
 {
-    public class Class1
+    class Greet
     {
+        public static string sayHello(string name)
+        {
+            return (String.Format("Hello, {0}", name));
+        }
     }
 }
