@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace MyClassLibrary
 {
-    class Greet
+    public class Greet
     {
         public static string sayHello(string name)
         {
-            return (String.Format("Hello, {0}", name));
+            string param = name?.Length > 0 ? name : "World";
+            return (String.Format("Hello, {0}", param));
         }
     }
 }
