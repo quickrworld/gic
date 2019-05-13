@@ -10,7 +10,11 @@ namespace MyClassLibrary
     {
         public static string sayHello(string name)
         {
-            string param = name?.Length > 0 ? name : "World";
+            string param = "World";
+            if (name != null && name.Length != 0)
+            {
+                param = name;
+            }
             return (String.Format("Hello, {0}", param));
         }
     }
